@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickServe · Café POS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="brand">Quick<b>Serve</b><small>Café POS</small></div>
+
+      <nav aria-label="Sections">
+        <a href="#/dashboard" data-route="dashboard"><span>📊</span>Dashboard</a>
+        <a href="#/menu" data-route="menu"><span>🍽️</span>Menu</a>
+        <a href="#/cart" data-route="cart"><span>🛒</span>Cart<i class="badge" data-badge="cart"></i></a>
+        <a href="#/orders" data-route="orders"><span>📋</span>Orders</a>
+        <a href="#/kitchen" data-route="kitchen"><span>👨‍🍳</span>Kitchen<i class="badge" data-badge="kitchen"></i></a>
+        <a href="#/tables" data-route="tables"><span>🪑</span>Tables</a>
+        <a href="#/billing" data-route="billing"><span>🧾</span>Billing</a>
+      </nav>
+
+      <div class="side-foot">
+        <button class="ghost-dark" data-act="reset">Reset demo data</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <h1 id="title">Dashboard</h1>
+        <span id="date"></span>
+      </header>
+      <section id="app" aria-live="polite"></section>
+    </main>
+
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
