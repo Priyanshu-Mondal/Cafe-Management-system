@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickServe - Café Ordering System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+        <div class="header-brand">
+            <div class="brand-icon">☕</div>
+            <div class="brand-text">
+                <h1>QuickServe Café</h1>
+                <p class="brand-tagline">Fast • Fresh • Digital Ordering</p>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div id="connection-status" class="status-indicator online" title="Backend connection status">
+                <span class="status-dot"></span>
+                <span class="status-label">Online</span>
+            </div>
+
+            <nav class="app-nav">
+                <button id="menu-btn" class="nav-btn active">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">Menu</span>
+                </button>
+                <button id="cart-btn" class="nav-btn">
+                    <span class="nav-icon">🛒</span>
+                    <span class="nav-text">Cart</span>
+                    <span id="cart-count" class="badge">0</span>
+                </button>
+                <button id="orders-btn" class="nav-btn">
+                    <span class="nav-icon">👨‍🍳</span>
+                    <span class="nav-text">Kitchen</span>
+                    <span id="orders-badge" class="badge badge-accent">0</span>
+                </button>
+                <button id="tables-btn" class="nav-btn">
+                    <span class="nav-icon">🪑</span>
+                    <span class="nav-text">Tables</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="app-main">
+        <!-- GLOBAL TABLE SELECTOR BAR -->
+        <div class="table-bar">
+            <div class="table-bar-info">
+                <span class="table-bar-label">Ordering for Table:</span>
+                <div class="table-select-wrapper">
+                    <select id="global-table-select" aria-label="Select café table">
+                        <!-- Populated by JS (Tables 1 to 15) -->
+                    </select>
+                </div>
+                <span id="table-details-badge" class="table-details-badge">2 Seats • Window</span>
+            </div>
+            <div class="table-bar-quick">
+                <span id="current-cart-quick-total">Cart: ₹0.00</span>
+                <button id="quick-cart-view-btn" class="btn btn-sm btn-outline">View Order</button>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 1: MENU ================= -->
+        <section id="menu-section" class="app-section">
+            <div class="section-header">
+                <div>
+                    <h2>Café Menu</h2>
+                    <p class="section-subtitle">Browse delicious items, filter by dietary preference, or search</p>
+                </div>
+                <div class="menu-search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="menu-search-input" placeholder="Search chai, dosa, biryani..." autocomplete="off">
+                    <button id="clear-search-btn" class="clear-search-btn hidden" title="Clear search">×</button>
+                </div>
+            </div>
+
+            <!-- Category Pills & Dietary Toggle -->
+            <div class="menu-controls">
+                <div id="category-filters" class="category-filters">
+                    <!-- Populated dynamically via JS -->
+                </div>
+                <div class="dietary-toggle-wrap">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="veg-only-filter">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="veg-toggle-label"><span class="veg-dot-inline"></span> Veg Only</span>
+                </div>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div id="menu-items" class="menu-grid">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- ================= SECTION 2: CART / CHECKOUT ================= -->
+        <section id="cart-section" class="app-section hidden">
+            <div class="section-header">
+                <div>
+                    <h2>Current Order & Checkout</h2>
+                    <p class="section-subtitle">Review items, adjust quantities, and place the order for your table</p>
+                </div>
+                <button id="cart-back-to-menu-btn" class="btn btn-sm btn-outline">← Back to Menu</button>
+            </div>
+
+            <div class="cart-layout">
+                <!-- Left: Items list -->
+                <div class="cart-items-column">
+                    <div class="cart-card">
+                        <div class="cart-card-header">
+                            <span class="cart-card-title">Order Items</span>
+                            <button id="clear-cart-btn" class="btn-text text-danger">Clear All</button>
+                        </div>
+                        <div id="cart-items" class="cart-items-list">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bill Summary & Checkout -->
+                <div class="cart-summary-column">
+                    <div class="cart-card summary-card">
+                        <h3 class="summary-title">Order Summary</h3>
+                        
+                        <div class="form-group">
+                            <label for="cart-table-select">Assigned Table *</label>
+                            <select id="cart-table-select" class="form-control">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-notes">Special Instructions (Optional)</label>
+                            <input type="text" id="order-notes" class="form-control" placeholder="e.g., Less spicy, separate chutney">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div class="payment-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-mode" value="cash" checked>
+                                    <span>💵 Cash</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-mode" value="upi">
+                                    <span>📱 UPI</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-mode" value="card">
+                                    <span>💳 Card</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bill-breakdown">
+                            <div class="bill-row">
+                                <span>Subtotal</span>
+                                <span id="bill-subtotal">₹0.00</span>
+                            </div>
+                            <div class="bill-row">
+                                <span>GST (5%) <small class="text-muted">(2.5% CGST + 2.5% SGST)</small></span>
+                                <span id="bill-tax">₹0.00</span>
+                            </div>
+                            <div class="bill-divider"></div>
+                            <div class="bill-row grand-total">
+                                <span>Grand Total</span>
+                                <span id="bill-total">₹0.00</span>
+                            </div>
+                        </div>
+
+                        <button id="checkout-btn" class="btn btn-primary btn-block btn-lg">
+                            Place Order
+                        </button>
+                        <p class="checkout-hint">Order is immediately sent to the kitchen display system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 3: KITCHEN / ACTIVE ORDERS ================= -->
+        <section id="orders-section" class="app-section hidden">
+            <div class="section-header">
+                <div>
+                    <h2>Kitchen & Active Orders</h2>
+                    <p class="section-subtitle">Real-time status updates: Pending → Preparing → Ready → Delivered</p>
+                </div>
+                <div class="orders-header-actions">
+                    <button id="refresh-orders-btn" class="btn btn-sm btn-outline">
+                        🔄 Refresh
+                    </button>
+                </div>
+            </div>
+
+            <!-- Orders Status Filter Tabs -->
+            <div class="orders-filter-bar">
+                <button class="order-filter-btn active" data-filter="all">All Orders (<span id="count-all">0</span>)</button>
+                <button class="order-filter-btn" data-filter="active">Active (<span id="count-active">0</span>)</button>
+                <button class="order-filter-btn status-pending" data-filter="pending">Pending (<span id="count-pending">0</span>)</button>
+                <button class="order-filter-btn status-preparing" data-filter="preparing">Preparing (<span id="count-preparing">0</span>)</button>
+                <button class="order-filter-btn status-ready" data-filter="ready">Ready (<span id="count-ready">0</span>)</button>
+                <button class="order-filter-btn status-delivered" data-filter="delivered">Delivered (<span id="count-delivered">0</span>)</button>
+            </div>
+
+            <!-- Orders Grid/List -->
+            <div id="orders-list" class="orders-grid">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- ================= SECTION 4: TABLES OVERVIEW ================= -->
+        <section id="tables-section" class="app-section hidden">
+            <div class="section-header">
+                <div>
+                    <h2>Café Table Overview (15 Tables)</h2>
+                    <p class="section-subtitle">Real-time occupancy, active table orders, and seating locations</p>
+                </div>
+            </div>
+
+            <div id="tables-grid" class="tables-grid">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= BILL / RECEIPT MODAL ================= -->
+    <div id="bill-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="receipt-title">
+        <div class="modal-card receipt-modal">
+            <button id="close-bill-btn" class="modal-close" aria-label="Close receipt">×</button>
+            <div id="receipt-content" class="receipt-paper">
+                <!-- Dynamically populated bill content -->
+            </div>
+            <div class="receipt-actions">
+                <button id="print-bill-btn" class="btn btn-primary">🖨️ Print Bill</button>
+                <button id="dismiss-bill-btn" class="btn btn-outline">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

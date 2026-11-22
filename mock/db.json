@@ -1,0 +1,944 @@
+{
+  "categories": [
+    {
+      "id": "cat1",
+      "name": "Beverages",
+      "icon": "☕"
+    },
+    {
+      "id": "cat2",
+      "name": "Snacks",
+      "icon": "🥟"
+    },
+    {
+      "id": "cat3",
+      "name": "South Indian",
+      "icon": "🥘"
+    },
+    {
+      "id": "cat4",
+      "name": "Main Course",
+      "icon": "🍛"
+    },
+    {
+      "id": "cat5",
+      "name": "Desserts",
+      "icon": "🍨"
+    }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "name": "Masala Chai",
+      "price": 30,
+      "category": "Beverages",
+      "description": "Authentic brewed Indian tea with ginger and cardamom",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "2",
+      "name": "Filter Coffee",
+      "price": 40,
+      "category": "Beverages",
+      "description": "Traditional South Indian frothy decoction coffee",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "3",
+      "name": "Cold Coffee",
+      "price": 90,
+      "category": "Beverages",
+      "description": "Rich blended iced coffee topped with chocolate drizzle",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "4",
+      "name": "Fresh Lime Soda",
+      "price": 60,
+      "category": "Beverages",
+      "description": "Refreshing sparkling lime with sweet or salted mix",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "5",
+      "name": "Lassi (Sweet)",
+      "price": 70,
+      "category": "Beverages",
+      "description": "Thick creamy churned yogurt sweetened with saffron essence",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "6",
+      "name": "Samosa (2 pcs)",
+      "price": 40,
+      "category": "Snacks",
+      "description": "Crispy fried pastry filled with spiced potato and green peas",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "7",
+      "name": "Vada Pav",
+      "price": 35,
+      "category": "Snacks",
+      "description": "Mumbai special spiced batata vada inside buttered pav with chutney",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "8",
+      "name": "Pav Bhaji",
+      "price": 120,
+      "category": "Snacks",
+      "description": "Mashed spiced vegetable curry served with toasted butter buns",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "9",
+      "name": "Paneer Tikka",
+      "price": 220,
+      "category": "Snacks",
+      "description": "Clay-oven roasted cottage cheese cubes marinated in tandoori spices",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "10",
+      "name": "Chicken 65",
+      "price": 260,
+      "category": "Snacks",
+      "description": "Deep-fried spicy chicken bites seasoned with curry leaves and red chilies",
+      "veg": false,
+      "available": true
+    },
+    {
+      "id": "11",
+      "name": "Masala Dosa",
+      "price": 110,
+      "category": "South Indian",
+      "description": "Crisp fermented crepe stuffed with seasoned potato mash, served with sambar",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "12",
+      "name": "Idli Sambar (3 pcs)",
+      "price": 80,
+      "category": "South Indian",
+      "description": "Steamed rice cakes served piping hot with lentil stew and coconut chutney",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "13",
+      "name": "Medu Vada (2 pcs)",
+      "price": 70,
+      "category": "South Indian",
+      "description": "Crispy golden lentil fritters paired with spiced tangy sambar",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "14",
+      "name": "Rava Upma",
+      "price": 90,
+      "category": "South Indian",
+      "description": "Roasted semolina porridge tempered with mustard seeds and curry leaves",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "15",
+      "name": "Veg Thali",
+      "price": 250,
+      "category": "Main Course",
+      "description": "Complete meal: Paneer sabzi, dal tadka, rice, 2 rotis, salad & sweet",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "16",
+      "name": "Chicken Biryani",
+      "price": 320,
+      "category": "Main Course",
+      "description": "Aromatic basmati rice cooked with tender marinated chicken and spices",
+      "veg": false,
+      "available": true
+    },
+    {
+      "id": "17",
+      "name": "Paneer Butter Masala",
+      "price": 280,
+      "category": "Main Course",
+      "description": "Cottage cheese chunks simmered in a creamy tomato-cashew butter gravy",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "18",
+      "name": "Veg Fried Rice",
+      "price": 180,
+      "category": "Main Course",
+      "description": "Wok-tossed basmati rice with finely diced seasonal veggies and soy seasoning",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "19",
+      "name": "Hakka Noodles",
+      "price": 170,
+      "category": "Main Course",
+      "description": "Stir-fried noodles with crunchy cabbage, bell peppers and mild chili garlic sauce",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "20",
+      "name": "Butter Naan + Dal",
+      "price": 200,
+      "category": "Main Course",
+      "description": "Two tandoor butter naans served with slow-cooked homestyle yellow dal",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "21",
+      "name": "Gulab Jamun (2 pcs)",
+      "price": 60,
+      "category": "Desserts",
+      "description": "Warm milk-solid dumplings soaked in rose and cardamom sugar syrup",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "22",
+      "name": "Gajar Halwa",
+      "price": 90,
+      "category": "Desserts",
+      "description": "Grated red carrots slow cooked in whole milk, ghee, and roasted dry fruits",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "23",
+      "name": "Rasmalai (2 pcs)",
+      "price": 80,
+      "category": "Desserts",
+      "description": "Soft cottage cheese patties immersed in saffron and pistachio infused milk",
+      "veg": true,
+      "available": true
+    },
+    {
+      "id": "24",
+      "name": "Filter Coffee Ice Cream",
+      "price": 100,
+      "category": "Desserts",
+      "description": "Signature café artisanal churned ice cream infused with South Indian filter roast",
+      "veg": true,
+      "available": false
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "seats": 2,
+      "location": "Window"
+    },
+    {
+      "id": 2,
+      "seats": 2,
+      "location": "Window"
+    },
+    {
+      "id": 3,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 4,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 5,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 6,
+      "seats": 6,
+      "location": "Corner"
+    },
+    {
+      "id": 7,
+      "seats": 2,
+      "location": "Window"
+    },
+    {
+      "id": 8,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 9,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 10,
+      "seats": 6,
+      "location": "Corner"
+    },
+    {
+      "id": 11,
+      "seats": 2,
+      "location": "Window"
+    },
+    {
+      "id": 12,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 13,
+      "seats": 4,
+      "location": "Center"
+    },
+    {
+      "id": 14,
+      "seats": 6,
+      "location": "Corner"
+    },
+    {
+      "id": 15,
+      "seats": 2,
+      "location": "Window"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-1001",
+      "tableNo": 3,
+      "status": "pending",
+      "items": [
+        {
+          "id": "11",
+          "name": "Masala Dosa",
+          "price": 110,
+          "qty": 2,
+          "veg": true,
+          "category": "South Indian"
+        },
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": true,
+          "category": "Beverages"
+        }
+      ],
+      "subtotal": 280,
+      "tax": 14,
+      "total": 294,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T12:15:00.000Z"
+    },
+    {
+      "id": "ORD-1002",
+      "tableNo": 7,
+      "status": "ready",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "Main Course"
+        },
+        {
+          "id": "3",
+          "name": "Cold Coffee",
+          "price": 90,
+          "qty": 1,
+          "veg": true,
+          "category": "Beverages"
+        }
+      ],
+      "subtotal": 410,
+      "tax": 20.5,
+      "total": 430.5,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T12:20:00.000Z"
+    },
+    {
+      "id": "ORD-1003",
+      "tableNo": 12,
+      "status": "ready",
+      "items": [
+        {
+          "id": "8",
+          "name": "Pav Bhaji",
+          "price": 120,
+          "qty": 1,
+          "veg": true,
+          "category": "Snacks"
+        },
+        {
+          "id": "21",
+          "name": "Gulab Jamun (2 pcs)",
+          "price": 60,
+          "qty": 1,
+          "veg": true,
+          "category": "Desserts"
+        }
+      ],
+      "subtotal": 180,
+      "tax": 9,
+      "total": 189,
+      "paymentMode": "card",
+      "createdAt": "2026-11-05T12:28:00.000Z"
+    },
+    {
+      "id": "ORD-1004",
+      "tableNo": 1,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 2,
+          "veg": true,
+          "category": "Snacks"
+        },
+        {
+          "id": "2",
+          "name": "Filter Coffee",
+          "price": 40,
+          "qty": 2,
+          "veg": true,
+          "category": "Beverages"
+        }
+      ],
+      "subtotal": 160,
+      "tax": 8,
+      "total": 168,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T11:50:00.000Z"
+    },
+    {
+      "items": [
+        {
+          "id": "7",
+          "name": "Vada Pav",
+          "price": 35,
+          "category": "Snacks",
+          "veg": true,
+          "available": true,
+          "qty": 1
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "category": "Snacks",
+          "veg": true,
+          "available": true,
+          "qty": 1
+        }
+      ],
+      "total": 75,
+      "status": "pending",
+      "id": "ORD-1793895826335-63ec9af7",
+      "createdAt": "2026-11-05T16:23:46.335Z"
+    },
+    {
+      "id": "ORD-6394",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T16:29:01.229Z"
+    },
+    {
+      "id": "ORD-4420",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T16:29:01.233Z"
+    },
+    {
+      "id": "ORD-8320",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T16:29:17.344Z"
+    },
+    {
+      "id": "ORD-8229",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T16:29:17.348Z"
+    },
+    {
+      "id": "ORD-3432",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T16:30:16.714Z"
+    },
+    {
+      "id": "ORD-8994",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T16:30:16.717Z"
+    },
+    {
+      "id": "ORD-5945",
+      "tableNo": 1,
+      "status": "preparing",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 1,
+          "veg": true,
+          "category": "Beverages"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": true,
+          "category": "Snacks"
+        }
+      ],
+      "subtotal": 70,
+      "tax": 3.5,
+      "total": 73.5,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T16:53:19.975Z"
+    },
+    {
+      "id": "ORD-1654",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T16:58:06.732Z"
+    },
+    {
+      "id": "ORD-4276",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T16:58:06.735Z"
+    },
+    {
+      "id": "ORD-9074",
+      "tableNo": 2,
+      "status": "pending",
+      "items": [
+        {
+          "id": "10",
+          "name": "Chicken 65",
+          "price": 260,
+          "qty": 1,
+          "veg": false,
+          "category": "Snacks"
+        }
+      ],
+      "subtotal": 260,
+      "tax": 13,
+      "total": 273,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T17:08:29.593Z"
+    },
+    {
+      "id": "ORD-1255",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T17:15:36.480Z"
+    },
+    {
+      "id": "ORD-7746",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T17:15:36.483Z"
+    },
+    {
+      "id": "ORD-9589",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T17:16:01.428Z"
+    },
+    {
+      "id": "ORD-4801",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T17:16:01.432Z"
+    },
+    {
+      "id": "ORD-3686",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T17:49:36.769Z"
+    },
+    {
+      "id": "ORD-9037",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-05T17:49:36.772Z"
+    },
+    {
+      "id": "ORD-5596",
+      "tableNo": 2,
+      "status": "pending",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-05T18:22:18.605Z"
+    },
+    {
+      "id": "ORD-8372",
+      "tableNo": 2,
+      "status": "delivered",
+      "items": [
+        {
+          "id": "1",
+          "name": "Masala Chai",
+          "price": 30,
+          "qty": 2,
+          "veg": false,
+          "category": "General"
+        },
+        {
+          "id": "6",
+          "name": "Samosa (2 pcs)",
+          "price": 40,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "total": 105,
+      "paymentMode": "cash",
+      "createdAt": "2026-11-22T13:06:47.354Z"
+    },
+    {
+      "id": "ORD-9533",
+      "tableNo": 8,
+      "status": "pending",
+      "items": [
+        {
+          "id": "16",
+          "name": "Chicken Biryani",
+          "price": 320,
+          "qty": 1,
+          "veg": false,
+          "category": "General"
+        }
+      ],
+      "subtotal": 320,
+      "tax": 16,
+      "total": 336,
+      "paymentMode": "upi",
+      "createdAt": "2026-11-22T13:06:47.357Z"
+    }
+  ],
+  "meta": {
+    "cafeName": "QuickServe Café",
+    "tagline": "Fresh • Fast • Delicious",
+    "currency": "INR",
+    "currencySymbol": "₹",
+    "gstRate": 0.05,
+    "gstNote": "5% GST (2.5% CGST + 2.5% SGST)",
+    "totalTables": 15,
+    "statuses": [
+      "pending",
+      "preparing",
+      "ready",
+      "delivered"
+    ],
+    "paymentModes": [
+      "cash",
+      "upi",
+      "card"
+    ]
+  }
+}

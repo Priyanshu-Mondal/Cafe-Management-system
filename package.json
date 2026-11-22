@@ -1,0 +1,11 @@
+{
+  "name": "quickserve",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QuickServe - Modern Café Ordering System",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/test.js"
+    
+  }
+}
